@@ -58,7 +58,7 @@ with open('onehot_encoder_geo.pkl','rb') as file:
 with open('label_encoder_gender.pkl','rb') as file:
     label_encoder_gender = pickle.load(file)
 
-with open('scalar.pkl','rb') as file:
+with open('scaler.pkl','rb') as file:
     scalar = pickle.load(file)
 
 st.title("Customer Churn Prediction")
