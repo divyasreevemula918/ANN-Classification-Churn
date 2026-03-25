@@ -1,99 +1,499 @@
-# 🏦 Bank Customer Churn Prediction using Neural Networks
+# 🏦 Bank Customer Churn Prediction using ANN
 
 ## 📌 Project Overview
-This project is an end-to-end **Customer Churn Prediction System** built using an **Artificial Neural Network (ANN)**.
+This project builds a Customer Churn Prediction system that classifies whether a bank customer will Stay 🙂 or Leave 😞 using an Artificial Neural Network (ANN).  
+It includes a live web application where users can input customer details and get predictions instantly.
 
-The application predicts whether a bank customer is likely to **churn** based on customer details such as credit score, geography, gender, age, balance, tenure, salary, and account activity.
+---
 
-The project includes:
-- Data preprocessing
-- Categorical encoding
-- Feature scaling
-- ANN model training
-- Saved preprocessing artifacts
-- Streamlit web application for real-time prediction
+## 🌐 Live Demo (Deployment)
+👉 Try the app here:  
+🔗 https://your-streamlit-link.streamlit.app  
+(Replace this with your actual deployed link)
 
 ---
 
 ## 🚀 Features
-- Predicts customer churn using ANN
-- User-friendly web app built with Streamlit
-- Uses saved preprocessing files for inference
-- Displays churn probability
-- Gives final churn / not churn decision
-- Includes dataset and experiment notebook
+- Predict customer churn  
+- Deep Learning model using ANN  
+- Real-time prediction via web app  
+- Interactive Streamlit UI  
+- Uses preprocessing (encoding + scaling)  
 
 ---
 
-## 🧠 Problem Statement
-Customer churn prediction helps banks identify customers who are likely to leave.
+## 🧠 Tech Stack
+- Python 🐍  
+- TensorFlow / Keras  
+- NumPy, Pandas, Scikit-learn  
+- Streamlit  
 
-By predicting churn early, businesses can:
-- improve retention strategies
-- reduce customer loss
-- increase profitability
+---
 
-This project uses deep learning to estimate churn probability from customer features.
+## 📂 Project Structure
+ANN-Classification-Churn/
+│
+├── app.py  
+├── experiments.ipynb  
+├── Churn_Modelling.csv  
+├── model.h5  
+├── label_encoder_gender.pkl  
+├── onehot_encoder_geo.pkl  
+├── scaler.pkl  
+├── requirements.txt  
+└── README.md  
+
+---
+
+## ❓ Problem Statement
+Banks often lose customers due to competition, poor service, or changing customer needs.  
+Predicting churn helps businesses take proactive actions.
+
+Example:
+If a customer is likely to churn:
+- Offer discounts 💰  
+- Improve service 📞  
+- Provide support 🤝  
 
 ---
 
 ## 📥 Input Features
-The model takes the following customer details:
+The model uses:
+- Credit Score  
+- Geography  
+- Gender  
+- Age  
+- Tenure  
+- Balance  
+- Number of Products  
+- Has Credit Card  
+- Is Active Member  
+- Estimated Salary  
 
-- Geography
-- Gender
-- Age
-- Credit Score
-- Balance
-- Estimated Salary
-- Tenure
-- Number of Products
-- Has Credit Card
-- Is Active Member
-
-### Example Input
-- Geography = France
-- Gender = Female
-- Age = 42
-- Credit Score = 650
-- Balance = 60000
-- Estimated Salary = 50000
-- Tenure = 5
-- Number of Products = 2
-- Has Credit Card = 1
-- Is Active Member = 1
+Example Input:
+Credit Score: 650  
+Geography: France  
+Gender: Female  
+Age: 42  
+Tenure: 5  
+Balance: 60000  
+Products: 2  
+Credit Card: 1  
+Active Member: 1  
+Estimated Salary: 50000  
 
 ---
 
 ## 📤 Output
-The app returns:
+The system provides:
+- Churn Probability  
+- Final Prediction  
 
-1. **Churn Probability**
-   - Example: `Churn probability: 0.72`
+Example Output:
+Churn Probability: 0.72  
+Prediction: Customer is likely to churn  
 
-2. **Prediction**
-   - `The customer is likely to churn`
-   - or
-   - `The customer is not likely to churn`
-
-### Output Meaning
-- Probability closer to **0** → customer is less likely to leave
-- Probability closer to **1** → customer is more likely to leave
+Meaning:
+- 0 → Not churn  
+- 1 → Likely churn  
 
 ---
 
-## 🏗️ Project Structure
+## ⚙️ How It Works
+1. Load dataset  
+2. Preprocess data (encoding + scaling)  
+3. Train ANN model  
+4. Save model and preprocessing files  
+5. Predict using Streamlit app  
 
-```text
+---
+
+## 🧠 Model Details
+This project uses an Artificial Neural Network (ANN).
+
+Why ANN?
+- Learns complex patterns  
+- Works well for classification  
+- Provides probability output  
+
+---
+
+## 🖥️ Streamlit App
+The app allows users to:
+- Enter customer details  
+- Click predict  
+- Get instant result  
+
+---
+
+## 📁 Files Used for Prediction
+- model.h5  
+- label_encoder_gender.pkl  
+- onehot_encoder_geo.pkl  
+- scaler.pkl  
+
+These ensure consistent preprocessing.
+
+---
+
+## ▶️ Run Locally
+git clone https://github.com/divyasreevemula918/ANN-Classification-Churn.git  
+cd ANN-Classification-Churn  
+pip install -r requirements.txt  
+streamlit run app.py  
+
+---
+
+## 📊 Results
+- Good churn prediction performance  
+- Real-time predictions  
+- User-friendly interface  
+
+---
+
+## 🖥️ Screenshots
+# 🏦 Bank Customer Churn Prediction using ANN
+
+## 📌 Project Overview
+This project builds a Customer Churn Prediction system that classifies whether a bank customer will Stay 🙂 or Leave 😞 using an Artificial Neural Network (ANN).  
+It includes a live web application where users can input customer details and get predictions instantly.
+
+---
+
+## 🌐 Live Demo (Deployment)
+👉 Try the app here:  
+🔗 https://your-streamlit-link.streamlit.app  
+(Replace this with your actual deployed link)
+
+---
+
+## 🚀 Features
+- Predict customer churn  
+- Deep Learning model using ANN  
+- Real-time prediction via web app  
+- Interactive Streamlit UI  
+- Uses preprocessing (encoding + scaling)  
+
+---
+
+## 🧠 Tech Stack
+- Python 🐍  
+- TensorFlow / Keras  
+- NumPy, Pandas, Scikit-learn  
+- Streamlit  
+
+---
+
+## 📂 Project Structure
 ANN-Classification-Churn/
 │
-├── Churn_Modelling.csv              # Dataset
-├── experiments.ipynb                # Notebook for preprocessing/training
-├── app.py                           # Streamlit application
-├── model.h5                         # Trained ANN model
-├── label_encoder_gender.pkl         # Saved label encoder for gender
-├── onehot_encoder_geo.pkl           # Saved one-hot encoder for geography
-├── scaler.pkl                       # Saved feature scaler
-├── requirements.txt                 # Dependencies
-├── README.md                        # Project documentation
-└── LICENSE
+├── app.py  
+├── experiments.ipynb  
+├── Churn_Modelling.csv  
+├── model.h5  
+├── label_encoder_gender.pkl  
+├── onehot_encoder_geo.pkl  
+├── scaler.pkl  
+├── requirements.txt  
+└── README.md  
+
+---
+
+## ❓ Problem Statement
+Banks often lose customers due to competition, poor service, or changing customer needs.  
+Predicting churn helps businesses take proactive actions.
+
+Example:
+If a customer is likely to churn:
+- Offer discounts 💰  
+- Improve service 📞  
+- Provide support 🤝  
+
+---
+
+## 📥 Input Features
+The model uses:
+- Credit Score  
+- Geography  
+- Gender  
+- Age  
+- Tenure  
+- Balance  
+- Number of Products  
+- Has Credit Card  
+- Is Active Member  
+- Estimated Salary  
+
+Example Input:
+Credit Score: 650  
+Geography: France  
+Gender: Female  
+Age: 42  
+Tenure: 5  
+Balance: 60000  
+Products: 2  
+Credit Card: 1  
+Active Member: 1  
+Estimated Salary: 50000  
+
+---
+
+## 📤 Output
+The system provides:
+- Churn Probability  
+- Final Prediction  
+
+Example Output:
+Churn Probability: 0.72  
+Prediction: Customer is likely to churn  
+
+Meaning:
+- 0 → Not churn  
+- 1 → Likely churn  
+
+---
+
+## ⚙️ How It Works
+1. Load dataset  
+2. Preprocess data (encoding + scaling)  
+3. Train ANN model  
+4. Save model and preprocessing files  
+5. Predict using Streamlit app  
+
+---
+
+## 🧠 Model Details
+This project uses an Artificial Neural Network (ANN).
+
+Why ANN?
+- Learns complex patterns  
+- Works well for classification  
+- Provides probability output  
+
+---
+
+## 🖥️ Streamlit App
+The app allows users to:
+- Enter customer details  
+- Click predict  
+- Get instant result  
+
+---
+
+## 📁 Files Used for Prediction
+- model.h5  
+- label_encoder_gender.pkl  
+- onehot_encoder_geo.pkl  
+- scaler.pkl  
+
+These ensure consistent preprocessing.
+
+---
+
+## ▶️ Run Locally
+git clone https://github.com/divyasreevemula918/ANN-Classification-Churn.git  
+cd ANN-Classification-Churn  
+pip install -r requirements.txt  
+streamlit run app.py  
+
+---
+
+## 📊 Results
+- Good churn prediction performance  
+- Real-time predictions  
+- User-friendly interface  
+
+---
+
+## 🖥️ Screenshots
+# 🏦 Bank Customer Churn Prediction using ANN
+
+## 📌 Project Overview
+This project builds a Customer Churn Prediction system that classifies whether a bank customer will Stay 🙂 or Leave 😞 using an Artificial Neural Network (ANN).  
+It includes a live web application where users can input customer details and get predictions instantly.
+
+---
+
+## 🌐 Live Demo (Deployment)
+👉 Try the app here:  
+🔗 https://ann-classification-churn-2hdqqemxyfgffdqxq9cxdz.streamlit.app/
+
+---
+
+## 🚀 Features
+- Predict customer churn  
+- Deep Learning model using ANN  
+- Real-time prediction via web app  
+- Interactive Streamlit UI  
+- Uses preprocessing (encoding + scaling)  
+
+---
+
+## 🧠 Tech Stack
+- Python 🐍  
+- TensorFlow / Keras  
+- NumPy, Pandas, Scikit-learn  
+- Streamlit  
+
+---
+
+## 📂 Project Structure
+ANN-Classification-Churn/
+│
+├── app.py  
+├── experiments.ipynb  
+├── Churn_Modelling.csv  
+├── model.h5  
+├── label_encoder_gender.pkl  
+├── onehot_encoder_geo.pkl  
+├── scaler.pkl  
+├── requirements.txt  
+└── README.md  
+
+---
+
+## ❓ Problem Statement
+Banks often lose customers due to competition, poor service, or changing customer needs.  
+Predicting churn helps businesses take proactive actions.
+
+Example:
+If a customer is likely to churn:
+- Offer discounts 💰  
+- Improve service 📞  
+- Provide support 🤝  
+
+---
+
+## 📥 Input Features
+The model uses:
+- Credit Score  
+- Geography  
+- Gender  
+- Age  
+- Tenure  
+- Balance  
+- Number of Products  
+- Has Credit Card  
+- Is Active Member  
+- Estimated Salary  
+
+Example Input:
+Credit Score: 650  
+Geography: France  
+Gender: Female  
+Age: 42  
+Tenure: 5  
+Balance: 60000  
+Products: 2  
+Credit Card: 1  
+Active Member: 1  
+Estimated Salary: 50000  
+
+---
+
+## 📤 Output
+The system provides:
+- Churn Probability  
+- Final Prediction  
+
+Example Output:
+Churn Probability: 0.72  
+Prediction: Customer is likely to churn  
+
+Meaning:
+- 0 → Not churn  
+- 1 → Likely churn  
+
+---
+
+## ⚙️ How It Works
+1. Load dataset  
+2. Preprocess data (encoding + scaling)  
+3. Train ANN model  
+4. Save model and preprocessing files  
+5. Predict using Streamlit app  
+
+---
+
+## 🧠 Model Details
+This project uses an Artificial Neural Network (ANN).
+
+Why ANN?
+- Learns complex patterns  
+- Works well for classification  
+- Provides probability output  
+
+---
+
+## 🖥️ Streamlit App
+The app allows users to:
+- Enter customer details  
+- Click predict  
+- Get instant result  
+
+---
+
+## 📁 Files Used for Prediction
+- model.h5  
+- label_encoder_gender.pkl  
+- onehot_encoder_geo.pkl  
+- scaler.pkl  
+
+These ensure consistent preprocessing.
+
+---
+
+## ▶️ Run Locally
+git clone https://github.com/divyasreevemula918/ANN-Classification-Churn.git  
+cd ANN-Classification-Churn  
+pip install -r requirements.txt  
+streamlit run app.py  
+
+---
+
+## 📊 Results
+- Good churn prediction performance  
+- Real-time predictions  
+- User-friendly interface  
+
+---
+
+## 🖥️ Screenshots
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b2b67c04-3fb3-4b22-aa21-7e3f841f685b" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a0410e49-991f-420e-b970-e84a7640e8f9" />
+
+
+
+
+## 🌟 Future Improvements
+- Try LSTM / XGBoost  
+- Add evaluation metrics  
+- Improve UI  
+- Deploy with Docker + AWS  
+
+---
+
+## 🎯 Use Cases
+- Banks → reduce customer loss  
+- Analysts → understand behavior  
+- Students → learn ML deployment  
+
+---
+
+## 📚 Learning Outcomes
+- Data preprocessing  
+- Encoding & scaling  
+- ANN modeling  
+- Model deployment  
+- Streamlit usage  
+
+---
+
+## 👩‍💻 Author
+Divya Sree Vemula  
+GitHub: https://github.com/divyasreevemula918  
+LinkedIn: https://linkedin.com/in/divya-sree-vemula  
+
+
+ 
+
