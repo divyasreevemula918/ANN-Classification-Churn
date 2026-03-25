@@ -8,8 +8,8 @@ It includes a live web application where users can input customer details and ge
 
 ## 🌐 Live Demo (Deployment)
 👉 Try the app here:  
-🔗 https://your-streamlit-link.streamlit.app  
-(Replace this with your actual deployed link)
+🔗 https://ann-classification-churn-2hdqqemxyfgffdqxq9cxdz.streamlit.app/ 
+
 
 ---
 
